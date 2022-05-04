@@ -5,6 +5,19 @@
 [code](https://github.com/l294265421/SIGIR-TOWE-ARGCN)
 
 # IOG
+## Requirements
+torch==1.2.0 
+Keras==2.2.4 
+tqdm==4.28.1 
+dgl==0.3.1
+jsonnet==0.14.0
+allennlp==0.9.0 
+overrides==3.1.0 
+beautifulsoup4==4.6.3 
+jieba==0.42.1 
+psutil==5.4.8 
+networkx==2.2
+
 ## TOWE non-entire_space IOG (Training-validation instance type: Type I instance, Test instance type: Entire space)
 sh repeat_non_bert.sh 0 iog-rest14-0,iog-rest14-1,iog-rest14-2,iog-rest14-3,iog-rest14-4 nlp_tasks/absa/mining_opinions/sequence_labeling/towe_bootstrap.py --embedding_filepath /data/data/glove.840B.300d.txt --current_dataset ASOTEDataRest14 --data_type iog --model_name IOG --train True --evaluate True --predict False --crf False --epochs 10 --batch_size 1 --entire_space False > towe.iog-rest14-0.log 2>&1 &
 
