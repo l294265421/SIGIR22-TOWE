@@ -6,6 +6,8 @@
 
 # IOG
 ## Requirements
+anaconda
+Python==3.7.1
 torch==1.2.0 
 Keras==2.2.4 
 tqdm==4.28.1 
