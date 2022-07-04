@@ -1,4 +1,4 @@
-# SIGIR22-TOWE
+# Entire-Space-TOWE
 Training Entire-Space Models for Target-oriented Opinion Words Extraction (SIGIR 2022)
 
 # ARGCN
