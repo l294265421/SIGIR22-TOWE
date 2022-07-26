@@ -129,3 +129,5 @@ dmypy.json
 .pyre/
 
 .idea
+
+external_data/nltk_data

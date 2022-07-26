@@ -2,14 +2,13 @@ import os
 import sys
 
 project_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-if sys.platform != 'win32' and sys.platform != 'darwin':
-    project_dir = '/data/ceph/yuncongli/AGF-ASOTE/'
-
 original_data_dir = os.path.join(project_dir, 'AGF-ASOTE-data')
 
 common_data_dir = project_dir + '/data/'
 
 common_code_dir = project_dir + '/nlp_tasks/'
+
+external_data_dir = project_dir + '/external_data/'
 
 stopwords_filepath = original_data_dir + 'common/stopwords.txt'
 

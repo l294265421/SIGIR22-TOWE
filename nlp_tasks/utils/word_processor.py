@@ -1,12 +1,13 @@
 import abc
 
 import nltk
-nltk.data.path.append('/data/ceph/yuncongli/nltk_data')
 from nltk.corpus import stopwords
 
+from nlp_tasks.common import common_path
+
+nltk.data.path.append(common_path.external_data_dir + '/nltk_data')
 stemmer = nltk.stem.SnowballStemmer('english')
 english_stop_words = stopwords.words('english')
-
 
 class WordProcessorInterface:
     """
