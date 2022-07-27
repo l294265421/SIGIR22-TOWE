@@ -53,8 +53,7 @@ class DatasetReaderForTCBiLSTM(DatasetReader):
         self.tokenizer = tokenizer
         self.token_indexers = token_indexers or {"tokens": SingleIdTokenIndexer(namespace="tokens")}
         self.position_indexers = position_indexers or {"position": SingleIdTokenIndexer(namespace='position')}
-        # self.spacy_nlp = spacy.load("en_core_web_sm")
-        self.spacy_nlp = spacy.load("/data/ceph/yuncongli/software/en_core_web_sm/en_core_web_sm-2.1.0")
+        self.spacy_nlp = spacy.load("en_core_web_sm")
         self.core_nlp = core_nlp
         self.configuration = configuration
         self.sentence_segmenter = sentence_segmenter
@@ -1492,10 +1491,7 @@ class DatasetReaderForTermBertWithSecondSentence(DatasetReader):
         self.bert_tokenizer = bert_tokenizer
         self.bert_token_indexers = bert_token_indexers or {"bert": SingleIdTokenIndexer(namespace="bert")}
         self.position_indexers = position_indexers or {"position": SingleIdTokenIndexer(namespace='position')}
-        if sys.platform != 'win32' and sys.platform != 'darwin':
-            self.spacy_nlp = spacy.load("/data/ceph/yuncongli/software/en_core_web_sm/en_core_web_sm-2.1.0")
-        else:
-            self.spacy_nlp = spacy.load("en_core_web_sm")
+        self.spacy_nlp = spacy.load("en_core_web_sm")
         self.core_nlp = core_nlp
         self.configuration = configuration
         self.sentence_segmenter = sentence_segmenter

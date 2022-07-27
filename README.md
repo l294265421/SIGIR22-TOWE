@@ -40,6 +40,8 @@ nltk==3.4
 
 - we prepare nltk_data at ./external_data/nltk_data.zip, please unzip it.
 
+- install en_core_web_sm: pip install external_data/en_core_web_sm-2.1.0.tar.gz
+
 ## TOWE non-entire_space IOG (Training-validation instance type: Type I instance, Test instance type: Entire space)
 sh repeat_non_bert.sh 0 iog-rest14-0,iog-rest14-1,iog-rest14-2,iog-rest14-3,iog-rest14-4 nlp_tasks/absa/mining_opinions/sequence_labeling/towe_bootstrap.py --embedding_filepath glove.840B.300d.txt  --current_dataset ASOTEDataRest14 --data_type iog --model_name IOG --train True --evaluate True --predict False --crf False --epochs 10 --batch_size 1 --entire_space False > towe.iog-rest14-0.log 2>&1 &
 

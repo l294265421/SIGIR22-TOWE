@@ -137,10 +137,7 @@ class SpacyTokenizer(BaseTokenizer):
 
     def __init__(self, word_processor=word_processor.BaseWordProcessor()):
         super().__init__(word_processor)
-        if sys.platform != 'win32' and sys.platform != 'darwin':
-            self.spacy_nlp = spacy.load("/data/ceph/yuncongli/software/en_core_web_sm/en_core_web_sm-2.1.0")
-        else:
-            self.spacy_nlp = spacy.load("en_core_web_sm")
+        self.spacy_nlp = spacy.load("en_core_web_sm")
 
     def _inner_segment(self, text):
         if not self.is_valid_text(text):
