@@ -2,43 +2,22 @@
 
 
 from collections import OrderedDict
-import copy
-import sys
 from typing import *
 from overrides import overrides
-import pickle
 import copy
 
-import nltk
 import numpy as np
-import torch
-import torch.nn as nn
-import torch.optim as optim
-from allennlp.modules.seq2vec_encoders import Seq2VecEncoder, PytorchSeq2VecWrapper
-from allennlp.nn.util import get_text_field_mask
-from allennlp.models import Model
-from allennlp.modules.text_field_embedders import TextFieldEmbedder
 from allennlp.data.fields import TextField, MetadataField, ArrayField, ListField, LabelField, MultiLabelField, SequenceLabelField
 from allennlp.data.token_indexers import SingleIdTokenIndexer
-from allennlp.data.token_indexers import TokenIndexer
 from allennlp.data import Instance
 from allennlp.data.token_indexers import TokenIndexer
 from allennlp.data.tokenizers import Token
-from allennlp.nn import util as nn_util
-from allennlp.data.vocabulary import Vocabulary
 from allennlp.data.dataset_readers import DatasetReader
-import torch.nn.functional as F
-from allennlp.training import metrics
-from allennlp.models import BasicClassifier
-from allennlp.data.iterators import DataIterator
-from tqdm import tqdm
 import spacy
 from nltk.corpus import stopwords
 english_stop_words = stopwords.words('english')
 english_stop_words.extend([',', '.', '?', ';', '-', ':', '\'', '"', '(', ')', '!'])
 
-from nlp_tasks.utils import corenlp_factory
-from nlp_tasks.utils import create_graph
 from nlp_tasks.utils import my_corenlp
 from nlp_tasks.utils.sentence_segmenter import BaseSentenceSegmenter, NltkSentenceSegmenter
 

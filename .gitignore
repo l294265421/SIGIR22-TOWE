@@ -131,3 +131,4 @@ dmypy.json
 .idea
 
 external_data/nltk_data
+data

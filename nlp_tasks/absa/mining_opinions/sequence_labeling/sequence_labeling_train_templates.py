@@ -7,36 +7,25 @@ from typing import List
 import json
 
 import torch
-from sklearn.preprocessing import MultiLabelBinarizer
 from allennlp.data.token_indexers import WordpieceIndexer
 from allennlp.data.iterators import BucketIterator
 from allennlp.data.iterators import BasicIterator
-from allennlp.modules.text_field_embedders import BasicTextFieldEmbedder
-from allennlp.modules.token_embedders.bert_token_embedder import PretrainedBertEmbedder
 from allennlp.modules.text_field_embedders import TextFieldEmbedder
 import torch.optim as optim
-from torch.optim import adagrad
 # from allennlp.training.trainer import Trainer
 from nlp_tasks.absa.mining_opinions.sequence_labeling.my_allennlp_trainer import Trainer
 from allennlp.data.vocabulary import Vocabulary
-from allennlp.predictors import text_classifier
 from allennlp.data.token_indexers import SingleIdTokenIndexer
-import spacy
 from pytorch_pretrained_bert.tokenization import BertTokenizer
-from tqdm import tqdm
-from allennlp.nn import util as nn_util
 from allennlp.data.dataset_readers import DatasetReader
 from allennlp.modules.token_embedders.bert_token_embedder import BertModel, PretrainedBertModel
 from allennlp.modules.token_embedders.bert_token_embedder import BertEmbedder, PretrainedBertEmbedder
 
-from nlp_tasks.absa.entities import ModelTrainTemplate
 from nlp_tasks.absa.mining_opinions.sequence_labeling import sequence_labeling_data_reader
 from nlp_tasks.absa.mining_opinions.sequence_labeling import pytorch_models
 from allennlp.modules.token_embedders import Embedding
 from allennlp.modules.token_embedders import embedding
 from allennlp.modules.text_field_embedders import BasicTextFieldEmbedder
-from nlp_tasks.utils import file_utils
-from nlp_tasks.common import common_path
 from nlp_tasks.absa.aspect_category_detection_and_sentiment_classification import allennlp_callback
 from nlp_tasks.common import common_path
 from nlp_tasks.utils import file_utils
