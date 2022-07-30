@@ -1550,10 +1550,13 @@ class DatasetReaderForTermBertWithSecondSentence(DatasetReader):
         for sample in samples:
             if 'B' not in sample['target_tags']:
                 continue
-            if self.configuration['test_entire_space']:
-                target_datatypes = ('train', 'dev')
+            if 'only_test_non_entire_space' in self.configuration and self.configuration['only_test_non_entire_space']:
+                target_datatypes = ('test',)
             else:
-                target_datatypes = ('train', 'dev', 'test')
+                if self.configuration['test_entire_space']:
+                    target_datatypes = ('train', 'dev')
+                else:
+                    target_datatypes = ('train', 'dev', 'test')
             if 'entire_space' in self.configuration and not self.configuration['entire_space'] \
                     and sample['data_type'] in target_datatypes and 'B' not in sample['opinion_words_tags']:
                 continue
