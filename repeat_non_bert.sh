@@ -2,7 +2,7 @@
 start_time=`date +%Y%m%d%H%M%S`
 echo "start ${start_time}--------------------------------------------------"
 
-# tar -zcf AGF-ASOTE.tar nlp_tasks repeat_non_bert.sh
+# tar -zcf SIGIR22-TOWE.tar AGF-ASOTE-data nlp_tasks external_data repeat_non_bert.sh run.sh
 
 gpu_card=$1
 shift
