@@ -105,9 +105,6 @@ sh repeat_non_bert.sh 0 109-ASOTEDataRest15-0,109-ASOTEDataRest15-1,109-ASOTEDat
 
 sh repeat_non_bert.sh 0 109-ASOTEDataRest16-0,109-ASOTEDataRest16-1,109-ASOTEDataRest16-2,109-ASOTEDataRest16-3,109-ASOTEDataRest16-4 nlp_tasks/absa/mining_opinions/sequence_labeling/towe_bootstrap.py --embedding_filepath  glove.840B.300d.txt --bert_file_path  bert-base-uncased.tar.gz --bert_vocab_file_path vocab.txt  --current_dataset ASOTEDataRest16 --data_type common_bert_with_second_sentence_109 --model_name TermBertWithSecondSentence --train True --evaluate True --predict False --crf False --same_special_token False --fixed_bert False --position_and_second_sentence False --entire_space False --only_test_non_entire_space True > towe.109-ASOTEDataRest16-0.log 2>&1
 
-# Related Work
-- [A More Fine-Grained Aspect-Sentiment-Opinion Triplet Extraction Task](https://arxiv.org/pdf/2103.15255.pdf)
-
 ## Citation
 ```
 @misc{https://doi.org/10.48550/arxiv.2204.07337,
