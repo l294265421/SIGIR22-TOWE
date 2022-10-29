@@ -107,21 +107,21 @@ sh repeat_non_bert.sh 0 109-ASOTEDataRest16-0,109-ASOTEDataRest16-1,109-ASOTEDat
 
 ## Citation
 ```
-@misc{https://doi.org/10.48550/arxiv.2204.07337,
-  doi = {10.48550/ARXIV.2204.07337},
-  
-  url = {https://arxiv.org/abs/2204.07337},
-  
-  author = {Li, Yuncong and Wang, Fang and Zhong, Sheng-Hua},
-  
-  keywords = {Computation and Language (cs.CL), FOS: Computer and information sciences, FOS: Computer and information sciences},
-  
-  title = {Training Entire-Space Models for Target-oriented Opinion Words Extraction},
-  
-  publisher = {arXiv},
-  
-  year = {2022},
-  
-  copyright = {arXiv.org perpetual, non-exclusive license}
+@inproceedings{10.1145/3477495.3531768,
+    author = {Li, Yuncong and Wang, Fang and Zhong, Sheng-Hua},
+    title = {Training Entire-Space Models for Target-Oriented Opinion Words Extraction},
+    year = {2022},
+    isbn = {9781450387323},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    url = {https://doi.org/10.1145/3477495.3531768},
+    doi = {10.1145/3477495.3531768},
+    abstract = {Target-oriented opinion words extraction (TOWE) is a subtask of aspect-based sentiment analysis (ABSA). Given a sentence and an aspect term occurring in the sentence, TOWE extracts the corresponding opinion words for the aspect term. TOWE has two types of instance. In the first type, aspect terms are associated with at least one opinion word, while in the second type, aspect terms do not have corresponding opinion words. However, previous researches trained and evaluated their models with only the first type of instance, resulting in a sample selection bias problem. Specifically, TOWE models were trained with only the first type of instance, while these models would be utilized to make inference on the entire space with both the first type of instance and the second type of instance. Thus, the generalization performance will be hurt. Moreover, the performance of these models on the first type of instance cannot reflect their performance on entire space. To validate the sample selection bias problem, four popular TOWE datasets containing only aspect terms associated with at least one opinion word are extended and additionally include aspect terms without corresponding opinion words. Experimental results on these datasets show that training TOWE models on entire space will significantly improve model performance and evaluating TOWE models only on the first type of instance will overestimate model performance.},
+    booktitle = {Proceedings of the 45th International ACM SIGIR Conference on Research and Development in Information Retrieval},
+    pages = {1875–1879},
+    numpages = {5},
+    keywords = {sample selection bias, aspect-based sentiment analysis, target-oriented opinion words extraction},
+    location = {Madrid, Spain},
+    series = {SIGIR '22}
 }
 ```
